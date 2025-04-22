@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "category": "Men",
+      "slug": "men-clothing"
+    },
+    {
+      "id": 2,
+      "category": "Women",
+      "slug": "women-clothing"
+    },
+    {
+      "id": 3,
+      "category": "Kids",
+      "slug": "kids-clothing"
+    }
+  ]
+  
