@@ -5,7 +5,7 @@ import Card from "../pages/Card";
 const CoffeesCard = () => {
   const navigate = useNavigate();
   const data = useLoaderData();
-  const { cloth } = useParams(); // path parameter থেকে cloth নিয়ে আসা হচ্ছে
+  const { cloth } = useParams();
 
   const [coffees, setCoffees] = useState([]);
 
@@ -23,13 +23,9 @@ const CoffeesCard = () => {
   return (
     <div className="my-10">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {coffees.length > 0 ? (
-          coffees.map((coffee) => (
-            <Card key={coffee.id} cloth={coffee} />
-          ))
-        ) : (
-          <p>No items found in this category</p>
-        )}
+        {coffees.map((coffee) => (
+          <Card key={coffee.id} cloth={coffee} />
+        ))}
       </div>
 
       <button

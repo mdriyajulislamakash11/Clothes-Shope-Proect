@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Dashboard from "../pages/Dashboard";
 import Clothes from "../pages/Clothes";
 import ClothesCard from "../components/ClothesCard";
+import ClothDetailds from "../pages/ClothDetailds";
 
 const routes = createBrowserRouter([
     {
@@ -29,11 +30,17 @@ const routes = createBrowserRouter([
             },
             {
                 path: "/clothes",
-                element: <Clothes />
+                element: <Clothes />,
+                loader: () => fetch("../clothes.json")
             },
             {
                 path: "/dashboard",
                 element: <Dashboard />
+            },
+            {
+                path: "/clothee/:id",
+                element: <ClothDetailds />, 
+                loader: () => fetch("../clothes.json")
             }
         ]
     }
